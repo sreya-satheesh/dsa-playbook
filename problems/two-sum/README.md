@@ -36,14 +36,14 @@ Only one valid answer exists.
 - Space Complexity: O(1) (No extra space used)
 
 #### Implementation
-`
+```
 def two_sum_brute_force(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
                 return [i, j]
     return []
-`
+```
 #### 💡 Why is this inefficient?
 
 It checks all possible pairs, making it slow for large inputs.
@@ -56,7 +56,7 @@ It checks all possible pairs, making it slow for large inputs.
 - Space Complexity: O(n) (Hash map storage)
 
 #### Implementation
-`
+```
 def two_sum_hashmap(nums, target):
     num_map = {}  # Stores number and its index
     for i, num in enumerate(nums):
@@ -65,7 +65,7 @@ def two_sum_hashmap(nums, target):
             return [num_map[complement], i]
         num_map[num] = i
     return []
-`
+```
 #### 💡 Why is this efficient?
 
 It finds the solution in a single pass instead of checking all pairs.
@@ -81,7 +81,7 @@ It finds the solution in a single pass instead of checking all pairs.
 - Space Complexity: O(n) (Sorting may require extra space)
 
 #### Implementation
-`
+```
 def two_sum_two_pointers(nums, target):
     nums_with_indices = [(num, i) for i, num in enumerate(nums)]
     nums_with_indices.sort()  # Sorting based on values
@@ -96,7 +96,7 @@ def two_sum_two_pointers(nums, target):
         else:
             right -= 1
     return []
-`
+```
 #### 💡 When should you use this?
 
 If the array is already sorted or can be sorted without extra space concerns.
