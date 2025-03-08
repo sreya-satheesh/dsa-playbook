@@ -1,11 +1,11 @@
 # Two Sum 
 
 ## Problem  
-Given an array `nums` and an integer `target`, return **indices of the two numbers** such that they add up to `target`.
+Given an array nums and an integer target, return indices of the two numbers such that they add up to target.
 
-- Each input has exactly **one solution**.
-- You may not use the **same element twice**.
-- The answer can be returned **in any order**.
+- Each input has exactly one solution.
+- You may not use the same element twice.
+- The answer can be returned in any order.
 
 ## Example  
 
