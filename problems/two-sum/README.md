@@ -106,5 +106,7 @@ If the array is already sorted or can be sorted without extra space concerns.
 The hash map approach (O(n)) is the most efficient because:
 
 ✅ It finds the solution in a single pass.
+
 ✅ It uses a dictionary for quick lookups instead of checking all pairs.
+
 ✅ It has the best balance of time and space complexity.
