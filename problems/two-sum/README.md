@@ -101,7 +101,7 @@ def two_sum_two_pointers(nums, target):
 
 If the array is already sorted or can be sorted without extra space concerns.
 
-## 🚀 Best Approach
+## Best Approach
 
 The hash map approach (O(n)) is the most efficient because:
 
