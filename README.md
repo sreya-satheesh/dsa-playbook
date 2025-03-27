@@ -14,5 +14,3 @@ Click on a problem to explore its solution in depth:
 ✅ Multiple optimized solutions with time and space complexities
 
 ✅ Code implementations
-
-✅ Edge cases and pitfalls covered
