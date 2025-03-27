@@ -112,6 +112,8 @@ Initial Setup:
 
 🔍 Iteration Walkthrough
 
+![Screenshot 2025-03-27 183618](https://github.com/user-attachments/assets/48d8cc6e-d7c7-45c8-9896-226ed98ca248)
+
  Final Result:
 
  - The longest substring without repeating characters is "abc".
