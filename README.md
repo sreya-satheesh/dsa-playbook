@@ -8,6 +8,9 @@ Click on a problem to explore its solution in depth:
 ### 🔥 Arrays & Hashing  
 - [Two Sum](./problems/two-sum/README.md)  
 
+### 🚀 Sliding Window / Two Pointers
+- [Longest Substring Without Repeating Characters](./problems/longest-substring-without-repeating-characters/README.md)  
+
 ## 🚀 What's Inside? 
 ✅ Clear problem explanations with step-by-step insights
 
