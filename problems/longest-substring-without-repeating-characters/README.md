@@ -58,9 +58,7 @@ public int lengthOfLongestSubstring(String s)
 
 - 🔥 Step 2: Iterate Through the String
     - We use a for loop to iterate through the string using the right pointer:
-        - ```
-        for (int right = 0; right < s.length(); right++)
-         ```
+        - for (int right = 0; right < s.length(); right++)
         - This loop moves the right pointer from 0 to the end of the string.
         - On each iteration:
             - The character at s.charAt(right) is considered.
@@ -68,13 +66,11 @@ public int lengthOfLongestSubstring(String s)
     
 - 🔥 Step 3: Check for Duplicates
     - The while loop handles repeated characters:
-    - ```
-        while (set.contains(s.charAt(right))) 
+    - while (set.contains(s.charAt(right))) 
         {
             set.remove(s.charAt(left));   // Remove the leftmost character
             left++;                       // Move the left pointer
         }
-    ```
     - If the character already exists in the set:
         - It means we have a repeating character.
         - We shrink the window by removing the leftmost character (s.charAt(left)) from the set.
@@ -82,16 +78,12 @@ public int lengthOfLongestSubstring(String s)
     - This continues until the window contains only unique characters.
 
 - 🔥 Step 4: Expand the Window
-    - ```
-    set.add(s.charAt(right));
-    ```
+    - set.add(s.charAt(right));
     - After handling duplicates, we add the current character at s.charAt(right) to the set.
     - This expands the window, making it larger.
 
 - 🔥 Step 5: Update the Maximum Length
-    - ```
-    MaxLength = Math.max(MaxLength, right - left + 1);
-    ```
+    - MaxLength = Math.max(MaxLength, right - left + 1);
     - We calculate the current length of the substring:
         - current length=right−left+1
     - We update MaxLength to store the maximum length so far.
