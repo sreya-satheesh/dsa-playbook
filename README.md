@@ -10,6 +10,9 @@ Click on a problem to explore its solution in depth:
 
 ## 🚀 What's Inside? 
 ✅ Clear problem explanations with step-by-step insights
+
 ✅ Multiple optimized solutions with time and space complexities
+
 ✅ Code implementations
+
 ✅ Edge cases and pitfalls covered
