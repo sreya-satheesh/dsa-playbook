@@ -61,6 +61,7 @@ public static int[] twoSum(int[] nums, int target)
 
 ### ✅ Step-by-Step Execution
 **Input**: nums = [2, 7, 11, 15], target = 9
+
 **Goal**: Find two indices where the numbers add up to the target.
 
 #### 🛠️ Initial Setup
