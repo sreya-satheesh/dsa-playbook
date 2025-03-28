@@ -26,130 +26,86 @@ Given an array nums and an integer target, return indices of the two numbers suc
 
 Only one valid answer exists.
 
+## ✅ Solution: Hash Map (O(n)) – Optimal Solution
 
-## ✅ Approaches
-
-### 1️⃣ Brute Force (O(n²))
-
-- Iterate through every possible pair of numbers and check if their sum equals target.
-- Time Complexity: O(n²) (Nested loop)
-- Space Complexity: O(1) (No extra space used)
-
-#### Implementation
-```
-public static int[] twoSum(int[] nums, int target) 
-{
-    for (int i = 0; i < nums.length; i++) 
-    {
-        for (int j = i + 1; j < nums.length; j++) 
-        {
-            if (nums[i] + nums[j] == target) 
-            {
-                return new int[]{i, j};
-            }
-        }
-    }
-    return new int[]{};
-}
-```
-#### 💡 Why is this inefficient?
-
-It checks all possible pairs, making it slow for large inputs.
-
-
-### 2️⃣ Hash Map (O(n)) - Optimal Solution
+### 💡 Approach
 
 - Use a HashMap to store previously seen numbers and their indices.
-- For each number:
-    - Compute its complement: complement = target - num
+- For each number in the array:
+    - Compute its complement → complement = target - nums[i]
     - Check if the complement is already in the hash map:
-        - ✅ If yes → Return the indices.
-        - ❌ If no → Store the current number and its index in the map.
+        - ✅ If yes → Return the indices of the complement and the current number.
+        - ❌ If no → Store the current number and its index in the hash map.
 - Time Complexity: O(n) → Single pass through the array.
-- Space Complexity: O(n) → Hash map storage.
+- Space Complexity: O(n) → To store the hash map.
 
-#### Implementation
+### 🔥 Implementation
+
 ```
-public static int[] twoSum(int[] nums, int target) 
+public static int[] twoSum(int[] nums, int target)
 {
     HashMap<Integer, Integer> numMap = new HashMap<>();
 
-    for (int i = 0; i < nums.length; i++) 
+    for (int i = 0; i < nums.length; i++)
     {
         int complement = target - nums[i];
-
-        if (numMap.containsKey(complement)) 
+        if (numMap.containsKey(complement))
         {
             return new int[]{numMap.get(complement), i};
         }
-            
         numMap.put(nums[i], i);
     }
     return new int[]{};
 }
 ```
-#### 💡 Why is this efficient?
 
-It finds the solution in one pass instead of checking all pairs.
+### ✅ Step-by-Step Execution
+**Input**: nums = [2, 7, 11, 15], target = 9
+**Goal**: Find two indices where the numbers add up to the target.
 
+#### 🛠️ Initial Setup
+- nums = [2, 7, 11, 15]
+- target = 9
+- numMap = {} → Empty hash map
 
-### 3️⃣ Two Pointers (O(n log n)) – If Sorted
+#### 🔥 Iteration 1
+- Current number: 2
+- Complement: 9 - 2 = 7
+- Check hash map:
+    - numMap does NOT contain 7
+- Store current number in map:
+    - numMap = {2 → 0}
+- Move to the next iteration
 
-- First, sort the array while keeping track of the original indices.
-- Use the two-pointer technique:
-  - Start with one pointer at the beginning and one at the end.
-  - Move pointers based on the sum.
-    - 🔼 If the sum is too small → Move the left pointer.
-    - 🔽 If the sum is too large → Move the right pointer.
-- Time Complexity: O(n log n) → Sorting + O(n) two-pointer search = O(n log n)
-- Space Complexity: O(n) → To store original indices
+#### 🔥 Iteration 2
+- Current number: 7
+- Complement: 9 - 7 = 2
+- Check hash map:
+    - numMap contains 2
+- Return the result:
+    - return [numMap.get(2), 1] → [0, 1]
+- Output: [0, 1]
 
-#### Implementation
-```
-public static int[] twoSum(int[] nums, int target) 
-{
-    int[][] numsWithIndices = new int[nums.length][2];
+#### 🔥 Final Hash Map State
+numMap = { 2 → 0, 7 → 1}
 
-    for (int i = 0; i < nums.length; i++) 
-    {
-        numsWithIndices[i][0] = nums[i];
-        numsWithIndices[i][1] = i;
-    }
+### ✅ Why is this approach optimal?
 
-    Arrays.sort(numsWithIndices, (a, b) -> Integer.compare(a[0], b[0]));
+**Time Complexity**: O(n) - Single pass through the array.
+**Space Complexity**: O(n) Uses a hash map to store previously seen elements.
+**Efficient Lookup**: HashMap provides O(1) average time complexity for lookups, making it faster than the brute-force solution.
 
-    int left = 0, right = nums.length - 1;
+## 🚦 Other Approaches
 
-    while (left < right) 
-    {
-        int sum = numsWithIndices[left][0] + numsWithIndices[right][0];
+**Brute Force (O(n²))**
+- Use nested loops to check all pairs.
+- Time Complexity: O(n^2) → Inefficient for large inputs.
+- Space Complexity: O(1) → No extra space used.
+- Why avoid this? Slow for larger datasets due to nested loops.
 
-        if (sum == target) 
-        {
-            return new int[]{numsWithIndices[left][1], numsWithIndices[right][1]};
-        } 
-        else if (sum < target) 
-        {
-            left++;
-        } 
-        else
-        {
-            right--;
-        }
-    }
-    return new int[]{};
-}
-```
-#### 💡 When should you use this?
+**Two Pointers (O(n log n))**
+- Sort the array and use two pointers.
+- Time Complexity: O(n log n)
+- Space Complexity: O(n) → To store original indices.
+- When to use? If the array is already sorted.
 
-If the array is already sorted or can be sorted without extra space concerns..
-
-## 🥇 Best Approach
-
-The hash map approach (O(n)) is the most efficient because:
-
-✅ It finds the solution in a single pass.
-
-✅ Uses a dictionary for quick lookups.
-
-✅ Balances time and space complexity optimally.
