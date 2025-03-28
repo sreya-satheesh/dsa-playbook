@@ -12,8 +12,8 @@ Click on a problem to explore its solution in depth:
 - [Longest Substring Without Repeating Characters](./problems/longest-substring-without-repeating-characters/README.md)  
 
 ## 🚀 What's Inside? 
-✅ Clear problem explanations with step-by-step insights
+✅ Clear problem explanations with step-by-step insights.
 
-✅ Multiple optimized solutions with time and space complexities
+✅ Optimized solutions with time and space complexities.
 
-✅ Code implementations
+✅ Code implementations with detailed walkthroughs and examples.
