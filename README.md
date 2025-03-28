@@ -1,6 +1,6 @@
 # 🛠️ DSA Playbook
 
-A collection of must-know coding problems with detailed explanations, multiple optimizations, and code implementations.  
+A collection of must-know coding problems with detailed explanations, optimized solutions, and code implementations.  
 
 ## 📌 Problems List 
 Click on a problem to explore its solution in depth:  
