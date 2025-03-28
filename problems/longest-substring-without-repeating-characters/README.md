@@ -96,28 +96,71 @@ public int lengthOfLongestSubstring(String s)
 
 Let's break it down with an example string:
 
-Input: abcabcbb
+s = "abcabcbb"
 
-Output: 3 → ("abc" is the longest substring without repeating characters)
+### Iteration-by-Iteration Breakdown
 
-### 💡 Step-by-Step Execution
+#### 1️⃣ Initial State
+- set = {}
+- left = 0, right = 0
+- MaxLength = 0
 
-Initial Setup:
+#### 2️⃣ Right pointer at index 0 → 'a'
+- 'a' is not in the set → add it.
+- set = {a}
+- Length of the substring → right - left + 1 = 1
+- MaxLength = 1
 
-- set = {} → HashSet to store unique characters.
+#### 3️⃣ Right pointer at index 1 → 'b'
+- 'b' is not in the set → add it.
+- set = {a, b}
+- Length → right - left + 1 = 2
+- MaxLength = 2
 
-- MaxLength = 0 → Keeps track of the longest substring length.
+#### 4️⃣ Right pointer at index 2 → 'c'
+- 'c' is not in the set → add it.
+- set = {a, b, c}
+- Length → right - left + 1 = 3
+- MaxLength = 3
 
-- left = 0 → Left pointer of the sliding window.
+#### 5️⃣ Right pointer at index 3 → 'a'
+- 'a' is already in the set → remove the leftmost character ('a') from the set.
+- Move left pointer → left = 1
+- Add 'a' back → set = {b, c, a}
+- Length → right - left + 1 = 3
+- MaxLength = 3
 
-🔍 Iteration Walkthrough
+#### 6️⃣ Right pointer at index 4 → 'b'
+- 'b' is already in the set → remove 'b' from the set.
+- Move left → left = 2
+- Add 'b' back → set = {c, a, b}
+- Length → right - left + 1 = 3
+- MaxLength = 3
 
-![Screenshot 2025-03-27 183618](https://github.com/user-attachments/assets/48d8cc6e-d7c7-45c8-9896-226ed98ca248)
+#### 7️⃣ Right pointer at index 5 → 'c'
+- 'c' is already in the set → remove 'c'.
+- Move left → left = 3
+- Add 'c' back → set = {a, b, c}
+- Length → right - left + 1 = 3
+- MaxLength = 3
 
- **Final Result:**
+#### 8️⃣ Right pointer at index 6 → 'b'
+- 'b' is already in the set → remove 'a'.
+- Move left → left = 4
+- Add 'b' back → set = {b, c}
+- Length → right - left + 1 = 2
+- MaxLength = 3
 
- - The longest substring without repeating characters is "abc".
- - Output: 3
+#### 9️⃣ Right pointer at index 7 → 'b'
+- 'b' is already in the set → remove 'c'.
+- Move left → left = 5
+- Add 'b' back → set = {b}
+- Length → right - left + 1 = 1
+- MaxLength = 3
+
+#### ✅ Final Result
+The length of the longest substring without repeating characters is 3.
+The longest substrings without repeating characters are abc, bca, cab. All have a length of 3. Hence, the output is 3.
 
 ## Time and Space Complexity Analysis
 
