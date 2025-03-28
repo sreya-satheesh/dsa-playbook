@@ -170,4 +170,5 @@ private boolean canShipInDays(int[] weights, int days, int capacity)
 ## ✅ Complexity Analysis
 
 **Time Complexity**: O(N×log(∑(weights)−max(weights))) (N → length of the `weights` array)
+
 **Space Complexity:**: O(1) (No extra space used)
