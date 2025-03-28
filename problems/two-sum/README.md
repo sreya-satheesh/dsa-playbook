@@ -93,7 +93,9 @@ numMap = { 2 → 0, 7 → 1}
 ### ✅ Why is this approach optimal?
 
 **Time Complexity**: O(n) - Single pass through the array.
+
 **Space Complexity**: O(n) Uses a hash map to store previously seen elements.
+
 **Efficient Lookup**: HashMap provides O(1) average time complexity for lookups, making it faster than the brute-force solution.
 
 ## 🚦 Other Approaches
