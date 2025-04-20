@@ -13,6 +13,9 @@ Click on a problem to explore its solution in depth:
 - 3Sum : https://vocal.media/education/3-sum-problem
 - 4Sum : https://vocal.media/education/4-sum-problem
 
+### Binary Search
+- Koko Eating Bananas : https://vocal.media/education/koko-eating-bananas
+
 ## What's Inside? 
 ✅ Clear problem explanations with step-by-step insights.
 
