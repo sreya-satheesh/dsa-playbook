@@ -6,13 +6,10 @@ A collection of must-know coding problems with detailed explanations, optimized 
 Click on a problem to explore its solution in depth:  
 
 ### Hash Table / Map & Array 
-- [Two Sum](./problems/two-sum/README.md)  
+- Two Sum : https://vocal.media/education/the-two-sum-problem
 
 ### Sliding Window / Two Pointers
-- [Longest Substring Without Repeating Characters](./problems/longest-substring-without-repeating-characters/README.md)  
-
-### Binary Search
-- [Capacity To Ship Packages Within D Days](./problems/capacity-to-ship-packages-within-d-days/README.md)  
+- Longest Substring Without Repeating Characters : https://vocal.media/education/longest-substring-without-repeating-characters
 
 ## What's Inside? 
 ✅ Clear problem explanations with step-by-step insights.
