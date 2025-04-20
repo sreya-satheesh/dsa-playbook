@@ -10,6 +10,7 @@ Click on a problem to explore its solution in depth:
 
 ### Sliding Window / Two Pointers
 - Longest Substring Without Repeating Characters : https://vocal.media/education/longest-substring-without-repeating-characters
+- 3Sum : https://vocal.media/education/3-sum-problem
 
 ## What's Inside? 
 ✅ Clear problem explanations with step-by-step insights.
