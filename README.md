@@ -15,6 +15,7 @@ Click on a problem to explore its solution in depth:
 
 ### Binary Search
 - Koko Eating Bananas : https://vocal.media/education/koko-eating-bananas
+- Capacity To Ship Packages Within D Days : https://vocal.media/education/capacity-to-ship-packages-within-d-days
 
 ## What's Inside? 
 ✅ Clear problem explanations with step-by-step insights.
